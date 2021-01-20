@@ -10,6 +10,16 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="telegram:channel" content="@thethirdimpact" />
+    <meta data-rh="true" property="al:android:app_name" content="Medium" />
+    <meta property="tg:site_verification" />
+
+    {{#is "post"}}
+    {{#post}}
+    <meta property="article:author" content="{{authors autolink="false" limit="1"}}" />
+    <meta name="author" content="{{authors autolink="false" limit="1"}}" />
+    {{/post}}
+    {{/is}}
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
